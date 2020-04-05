@@ -52,21 +52,6 @@ management:
 spark.master: local
 spark.jars:
 
-logging:
-  level:
-    .: debug
-    sparta.supplynetwork: debug
-    org.springframework: warn
-    org.apache: warn
-    org.spark_project: warn
-    com.zaxxer: warn
-    org.hibernate: warn
-    liquibase: warn
-    springfox: warn
-  pattern:
-    console: "%msg%n"
-
-
 ---
 spring:
   profiles: cloud
