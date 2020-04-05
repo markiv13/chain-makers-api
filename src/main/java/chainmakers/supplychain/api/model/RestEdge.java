@@ -16,6 +16,12 @@ public class RestEdge implements Serializable {
     @JsonProperty
     private Long target;
 
+    @JsonProperty
+    private Long requiredCapacity;
+
+    @JsonProperty
+    private Long availableCapacity;
+
     /**Empty constructor needed for rest*/
     public RestEdge(){}
 
@@ -23,5 +29,13 @@ public class RestEdge implements Serializable {
         this.id = id;
         this.source = source;
         this.target = target;
+    }
+
+    public RestEdge(@Nullable Long id, Long source, Long target, Long requiredCapacity, Long availableCapacity) {
+        this.id = id;
+        this.source = source;
+        this.target = target;
+        this.requiredCapacity = requiredCapacity;
+        this.availableCapacity = availableCapacity;
     }
 }

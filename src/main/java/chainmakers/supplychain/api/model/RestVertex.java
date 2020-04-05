@@ -23,6 +23,21 @@ public class RestVertex implements Serializable{
     @JsonProperty
     private double fy;
 
+    @JsonProperty
+    private String type;
+
+    @JsonProperty
+    private String icon;
+
+    @JsonProperty
+    private Long requiredCapacity;
+
+    @JsonProperty
+    private Long availableCapacity;
+
+    @JsonProperty
+    private String instruction;
+
 
     /**Empty constructor needed for rest*/
     public RestVertex(){}
@@ -33,5 +48,19 @@ public class RestVertex implements Serializable{
         this.title = title;
         this.fx = fx;
         this.fy = fy;
+    }
+
+    public RestVertex(@Nullable Long id, String title, double fx, double fy, String type,
+                      String icon, Long requiredCapacity, Long availableCapacity, String instruction) {
+
+        this.id = id;
+        this.title = title;
+        this.fx = fx;
+        this.fy = fy;
+        this.type = type;
+        this.icon = icon;
+        this.requiredCapacity = requiredCapacity;
+        this.availableCapacity = availableCapacity;
+        this.instruction = instruction;
     }
 }

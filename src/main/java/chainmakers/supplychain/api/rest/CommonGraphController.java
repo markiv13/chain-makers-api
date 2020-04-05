@@ -6,6 +6,7 @@ import chainmakers.supplychain.api.model.RestProduct;
 import chainmakers.supplychain.api.model.RestVertex;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.jetbrains.annotations.Nullable;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,7 +22,7 @@ public class CommonGraphController {
     @ApiOperation(value = "get masks supply chain", notes = "get graph from mask supply chain")
     @GetMapping("/graphs/masks")
     public RestD3Graph getMasksSupplyChain() {
-        return testGraph();
+        return testGraph2();
     }
 
     @ApiOperation(value = "get masks supply chain", notes = "get graph from mask supply chain")
@@ -74,5 +75,35 @@ public class CommonGraphController {
         RestEdge e5 = new RestEdge(5L, 6L, 2L);
 
         return new RestD3Graph("masks-supply-chain", List.of(v1,v2, v3, v4, v5, v6), List.of(e1, e2, e3, e4, e5));
+    }
+
+    private RestD3Graph testGraph2() {
+
+        RestVertex v = new RestVertex(0L, "Karolinska Sjukhuset", 600.0, 400.0, "CONSUMER",
+                "n95.jpg", 0L, 0L, "");
+
+        RestVertex v1 = new RestVertex(1L,"N95 Mask", 400.0, 400.0, "ACTIVITY",
+                "n95.jpg", 10000L, 2000L, "https://www.youtube.com");
+        RestVertex v2 = new RestVertex(2L, "N95 Fiber Unit", 200.0, 200.0, "ACTIVITY",
+                "n95.jpg", 10000L, 8000L, "https://www.youtube.com");
+        RestVertex v3 = new RestVertex(3L, "Front Nose Bar", 200.0, 400.0, "ACTIVITY",
+                "n95.jpg", 10000L, 15000L, "https://www.youtube.com");
+        RestVertex v4 = new RestVertex(4L, "Back Nose Bar", 200.0, 600.0, "ACTIVITY",
+                "n95.jpg", 10000L, 9000L, "https://www.youtube.com");
+        RestVertex v5 = new RestVertex(5L, "Tightening Strips", 100.0, 200.0, "ACTIVITY",
+                "n95.jpg", 10000L, 12000L, "https://www.youtube.com");
+
+
+        RestVertex v6 = new RestVertex(6L, "ANDERS", 50.0, 50.0, "ACTOR",
+                "n95.jpg", 10000L, 12000L, "https://www.youtube.com");
+
+        RestEdge e = new RestEdge(0L, 1L, 0L, 10000L, 8000L);
+        RestEdge e1 = new RestEdge(1L, 2L, 1L, 10000L, 8000L);
+        RestEdge e2 = new RestEdge(2L, 5L, 2L, 10000L, 8000L);
+        RestEdge e3 = new RestEdge(3L, 3L, 1L, 10000L, 8000L);
+        RestEdge e4 = new RestEdge(4L, 4L, 1L, 10000L, 8000L);
+        RestEdge e5 = new RestEdge(5L, 6L, 2L, 10000L, 8000L);
+
+        return new RestD3Graph("masks-supply-chain", List.of(v, v1,v2, v3, v4, v5, v6), List.of(e, e1, e2, e3, e4, e5));
     }
 }
