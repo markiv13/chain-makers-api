@@ -83,19 +83,19 @@ public class CommonGraphController {
                 "n95.jpg", 0L, 0L, "");
 
         RestVertex v1 = new RestVertex(1L,"N95 Mask", 400.0, 400.0, "ACTIVITY",
-                "n95.jpg", 10000L, 2000L, "https://www.youtube.com");
+                "n95.jpg", 10000L, 2000L, "https://docs.google.com/document/d/1SGh4GStsBs3gYS_tbB017lVFNSfC1aVbbUiCtN9fZlA/edit#heading=h.j8gffz8wky6d");
         RestVertex v2 = new RestVertex(2L, "N95 Fiber Unit", 200.0, 200.0, "ACTIVITY",
-                "n95.jpg", 10000L, 8000L, "https://www.youtube.com");
+                "n95.jpg", 10000L, 8000L, "https://docs.google.com/document/d/1SGh4GStsBs3gYS_tbB017lVFNSfC1aVbbUiCtN9fZlA/edit#heading=h.j8gffz8wky6d");
         RestVertex v3 = new RestVertex(3L, "Front Nose Bar", 200.0, 400.0, "ACTIVITY",
-                "n95.jpg", 10000L, 15000L, "https://www.youtube.com");
+                "n95.jpg", 10000L, 15000L, "https://docs.google.com/document/d/1SGh4GStsBs3gYS_tbB017lVFNSfC1aVbbUiCtN9fZlA/edit#heading=h.j8gffz8wky6d");
         RestVertex v4 = new RestVertex(4L, "Back Nose Bar", 200.0, 600.0, "ACTIVITY",
-                "n95.jpg", 10000L, 9000L, "https://www.youtube.com");
+                "n95.jpg", 10000L, 9000L, "https://docs.google.com/document/d/1SGh4GStsBs3gYS_tbB017lVFNSfC1aVbbUiCtN9fZlA/edit#heading=h.j8gffz8wky6d");
         RestVertex v5 = new RestVertex(5L, "Tightening Strips", 100.0, 200.0, "ACTIVITY",
-                "n95.jpg", 10000L, 12000L, "https://www.youtube.com");
+                "n95.jpg", 10000L, 12000L, "https://docs.google.com/document/d/1SGh4GStsBs3gYS_tbB017lVFNSfC1aVbbUiCtN9fZlA/edit#heading=h.j8gffz8wky6d");
 
 
         RestVertex v6 = new RestVertex(6L, "ANDERS", 50.0, 50.0, "ACTOR",
-                "n95.jpg", 10000L, 12000L, "https://www.youtube.com");
+                "n95.jpg", 10000L, 12000L, "https://docs.google.com/document/d/1SGh4GStsBs3gYS_tbB017lVFNSfC1aVbbUiCtN9fZlA/edit#heading=h.j8gffz8wky6d");
 
         RestEdge e = new RestEdge(0L, 1L, 0L, 10000L, 8000L);
         RestEdge e1 = new RestEdge(1L, 2L, 1L, 10000L, 8000L);
