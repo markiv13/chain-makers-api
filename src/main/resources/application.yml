@@ -79,7 +79,7 @@ spring:
   autoconfigure:
     exclude: org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
 server:
-  port: 8090
+  port: 80
 
 management:
   endpoint:
@@ -92,16 +92,4 @@ management:
 spark.master: local
 spark.jars:
 
-logging:
-  level:
-    .: debug
-    sparta.supplynetwork: debug
-    org.springframework: warn
-    org.apache: warn
-    org.spark_project: warn
-    com.zaxxer: warn
-    org.hibernate: warn
-    liquibase: warn
-    springfox: warn
-  pattern:
-    console: "%msg%n"
+origin: http://chain-makers.s3-website.eu-north-1.amazonaws.com
