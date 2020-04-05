@@ -70,8 +70,7 @@ public class CommonGraphController {
         RestEdge e2 = new RestEdge(2L, 5L, 2L);
         RestEdge e3 = new RestEdge(3L, 3L, 1L);
         RestEdge e4 = new RestEdge(4L, 4L, 1L);
-        RestEdge e5 = new RestEdge(5L, 5L, 1L);
 
-        return new RestD3Graph("masks-supply-chain", List.of(v1,v2, v3, v4, v5), List.of(e1, e2, e3, e4, e5));
+        return new RestD3Graph("masks-supply-chain", List.of(v1,v2, v3, v4, v5), List.of(e1, e2, e3, e4));
     }
 }
